@@ -1,0 +1,16 @@
+technical:
+  returns: [1, 5, 21, 63]
+  volatility_windows: [10, 21, 63]
+  drawdown_windows: [63, 126, 252]
+  moving_averages: [10, 21, 50, 100, 200]
+  rsi_window: 14
+  macd:
+    fast: 12
+    slow: 26
+    signal: 9
+  atr_window: 14
+
+macro:
+  forward_fill_limit_days: 5
+  zscore_windows: [21, 63, 126]
+  yoy_periods: 252

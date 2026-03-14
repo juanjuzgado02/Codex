@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tfm-finance-ml"
+version = "0.1.0"
+description = "Pipeline local end-to-end para predicción probabilística de SPY"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2.0",
+  "pyarrow>=15.0.0",
+  "numpy>=1.26.0",
+  "requests>=2.31.0",
+  "yfinance>=0.2.40",
+  "python-dotenv>=1.0.1",
+  "pydantic>=2.7.0",
+  "pydantic-settings>=2.2.1",
+  "scikit-learn>=1.4.0",
+  "xgboost>=2.0.3",
+  "matplotlib>=3.8.0",
+  "shap>=0.45.0",
+  "typer>=0.12.3",
+  "jupyter>=1.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "pytest-cov>=5.0.0",
+  "ruff>=0.5.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
