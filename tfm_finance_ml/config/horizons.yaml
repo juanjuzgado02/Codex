@@ -1,0 +1,7 @@
+horizons:
+  - name: 1m
+    days: 21
+  - name: 3m
+    days: 63
+  - name: 6m
+    days: 126

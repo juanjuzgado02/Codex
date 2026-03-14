@@ -1,0 +1,37 @@
+yfinance:
+  enabled: true
+  tickers: [SPY]
+  auto_adjust: false
+  actions: true
+  interval: 1d
+
+fred:
+  enabled: true
+  base_url: https://api.stlouisfed.org/fred/series/observations
+  series:
+    - DGS10
+    - DGS2
+    - EFFR
+    - FEDFUNDS
+    - T10YIE
+    - CPIAUCSL
+    - PCEPI
+    - VIXCLS
+    - BAMLH0A0HYM2
+    - BAMLC0A4CBBB
+    - UNRATE
+    - M2SL
+    - DTWEXBGS
+    - DCOILWTICO
+
+cboe:
+  enabled: false
+  endpoint: https://www.cboe.com/us/options/market_statistics/
+
+occ:
+  enabled: false
+  endpoint: https://www.theocc.com/market-data/market-data-reports/volume-and-open-interest
+
+news:
+  enabled: false
+  providers: [newsapi, rss, gdelt]

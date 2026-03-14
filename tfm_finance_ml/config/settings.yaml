@@ -1,0 +1,22 @@
+project_name: tfm_finance_ml
+asset: SPY
+timezone: America/New_York
+frequency: daily
+currency: USD
+start_date: 2004-01-01
+end_date: null
+horizons: [21, 63, 126]
+label_price_field: adjusted_close
+random_seed: 42
+flags:
+  enable_options: false
+  enable_news: false
+  enable_cboe_connector: false
+paths:
+  data_root: data
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold
+  marts: data/marts
+  artifacts: data/artifacts
+  logs: data/artifacts/logs
