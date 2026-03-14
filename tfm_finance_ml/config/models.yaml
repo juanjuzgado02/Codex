@@ -1,0 +1,21 @@
+baselines:
+  dummy:
+    strategy: prior
+  logistic_regression:
+    C: 1.0
+    max_iter: 2000
+
+xgboost:
+  n_estimators: 300
+  max_depth: 4
+  learning_rate: 0.03
+  subsample: 0.9
+  colsample_bytree: 0.9
+  objective: binary:logistic
+  eval_metric: auc
+
+validation:
+  walk_forward:
+    train_window_days: 1260
+    test_window_days: 126
+    step_days: 21
